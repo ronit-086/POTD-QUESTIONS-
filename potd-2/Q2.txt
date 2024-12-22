@@ -1,0 +1,19 @@
+class Solution {
+    public int minimumOperations(int[] nums) {
+         int min=0;
+         int diff=0;
+         for(int i=0;i<nums.length;i++){
+            // it is not neccessay only check if divisible by 3 or not if not then increment min variable 
+            if(nums[i]>3 && nums[i]%3!=0){
+             diff=nums[i]-3;
+             min++;
+            }
+            else if(nums[i]<3 && nums[i]%3!=0){
+                diff=3-nums[i];
+                min++;
+            }
+
+         }
+          return min;
+    }
+}

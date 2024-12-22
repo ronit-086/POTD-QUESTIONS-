@@ -1,0 +1,10 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+           int res=0;
+           for(int i=0;i<nums.length;i++){
+           // result  mai sarre number ka xor karege same number ka xor 0 hoga and only one number is unique so result mai wahi store hoga  
+             res^=nums[i];
+          }
+          return res;
+    }
+}
