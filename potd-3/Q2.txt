@@ -1,0 +1,19 @@
+class Solution {
+    public int minimumMoves(String s) {
+         
+         int i=0;
+         int min=0;
+         while(i<s.length()){
+            if(s.charAt(i)=='O'){
+            // if string char is o then increment i value by one 
+                 i++;
+            }
+            else {
+        //if it is not zero then increment min value and incre index by 3 as we found one x then we will make it three consecutive zero so check after 3 cons char as length can be max of three..
+                min++;
+                i+=3;
+            }
+         }
+         return min;
+    }
+}

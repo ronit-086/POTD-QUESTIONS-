@@ -1,0 +1,23 @@
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+         int i=0;
+         int j=0;
+         int maxNo=0;
+         Arrays.sort(g); // sorting greedy array 
+         Arrays.sort(s); // sorting cookie array 
+         while(i<g.length && j<s.length){
+    // loop  willl run until one of them reach length of the array 
+                if(s[j]>=g[i]){
+        // if s[j]>=s[i] ho tho count increement karo and dono array ke index bada do 
+                  maxNo++;
+                i++;
+                j++;
+                }
+        // nyi tho bas cookie wale ka index bada do 
+                else {
+                    j++;
+                }
+         }
+         return maxNo;
+    }
+}
